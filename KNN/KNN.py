@@ -19,8 +19,8 @@ def preprocess_image(image):
     image = image / 255.
     return image
 
-images_path = "RF\RFdataset\JPEGImages"
-annotations_path = "RF\RFdataset/Annotations"
+images_path = "KNN\KNNdataset\JPEGImages"
+annotations_path = "KNN\KNNdataset/Annotations"
 
 image_files = sorted(os.listdir(images_path))
 annotation_files = sorted(os.listdir(annotations_path))
