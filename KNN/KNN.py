@@ -58,9 +58,11 @@ score = random_search.best_score_
 print("k:", k_value)
 print("score:", score)
 
-best_knn = KNeighborsClassifier(n_neighbors=k_value)
+best_knn = KNeighborsClassifier(n_neighbors=k_value, metric='euclidean')
 best_knn.fit(X_train, y_train)
 predict_s = best_knn.predict(X_test)
+
+
 accuracy = accuracy_score(y_test, predict_s)
 print(f"Accuracy: {accuracy:.2f}")
 
